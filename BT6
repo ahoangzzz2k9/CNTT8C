@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int m, n;
+    int a[10][10];
+    int tong = 0;   // bien lưu tong
+    int dem = 0;    // đem so phan tu
+
+    scanf("%d%d", &m, &n);  //nhap kich thuoc mang
+
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            scanf("%d", &a[i][j]);//nhap phan tu
+            tong += a[i][j];    //cong dong
+            dem++;             //tang so phan tu
+        }
+    }
+
+    printf("TBC = %.2f", (float)tong / dem);//in TBC
+    return 0;
+}
