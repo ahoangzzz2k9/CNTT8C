@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    float dai, rong, chuVi;
+
+    // Nhap chieu dai
+    printf("Nhap chieu dai: ");
+    scanf("%f", &dai);
+
+    // Nhap chieu rong
+    printf("Nhap chieu rong: ");
+    scanf("%f", &rong);
+
+    // Tinh chu vi
+    chuVi = 2 * (dai + rong);
+
+    // In ket qua
+    printf("Chu vi hinh chu nhat la: %.2f", chuVi);
+
+    return 0;
+}
