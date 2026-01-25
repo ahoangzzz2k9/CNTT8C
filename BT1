@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    int m, n;              // so dong va so cot
+    int a[10][10];         // mang 2 chieu toi da 10x10
+
+    // Nhap so dong
+    printf("Nhap so dong: ");
+    scanf("%d", &m);
+
+    // Nhap so cot
+    printf("Nhap so cot: ");
+    scanf("%d", &n);
+
+    // Vong lap nhap mang
+    for (int i = 0; i < m; i++)        // duyet tung dong
+    {
+        for (int j = 0; j < n; j++)    // duyet tung cot
+        {
+            printf("a[%d][%d] = ", i, j);
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    // In ra ma tran
+    printf("\nMa tran vua nhap:\n");
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("%5d", a[i][j]);    // in tung phan tu
+        }
+        printf("\n");                  // xuong dong moi hang
+    }
+
+    return 0;   // ket thuc chuong trinh
+}
