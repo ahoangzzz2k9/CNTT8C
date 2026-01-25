@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int m, n;           // khai bao so dong, so cot
+    int a[10][10];        // khai bao mang 2 chieu
+    int dem = 0;          // bien dem so chan
+
+    scanf("%d%d", &m, &n);         //nhap so dong va so cot
+    for (int i = 0; i < m; i++)     //duyet tung dong
+    {
+        for (int j = 0; j < n; j++) //duyet tung cot
+        {
+            scanf("%d", &a[i][j]);   //nhap phan tu
+        }
+    }
+
+    for (int i = 0; i < m; i++)      //duyet mang
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (a[i][j] % 2 == 0)       //kiem tra so chan
+            {
+                dem++;              //tang bien dien dem
+            }
+        }
+    }
+
+    // In ket qua
+    printf("So phan tu chan = %d", dem);//in ket qua
+
+    return 0;                           //ket thuc chuong trinh
+}
