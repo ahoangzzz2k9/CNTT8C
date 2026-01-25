@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+    int m, n;              // so dong, so cot
+    int a[10][10];         // mang 2 chieu
+    int max, dong, cot;    // bien luu gia tri lon nhat va vi tri
+
+    printf("Nhap so dong: "); scanf("%d", &m);
+    printf("Nhap so cot: "); scanf("%d", &n);
+
+    // Nhap mang
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("a[%d][%d] = ", i, j); scanf("%d", &a[i][j]);
+        }
+    }
+
+    max = a[0][0];               //gan phan tu dau tien la lon nhat
+    dong = 0;                    //gan vi tri ban dau
+    cot = 0;                     //gan vi tri ban dau
+
+    // Tim phan tu lon nhat
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (a[i][j] > max)   //so sanh voi max
+            {
+                max = a[i][j];   //cap nhat gia tri max
+                dong = i;        //luu dong
+                cot = j;         //luu cot
+            }
+        }
+    }
+
+    printf("Gia tri lon nhat = %d\n", max);
+    printf("Vi tri: dong %d, cot %d\n", dong, cot);
+    return 0;
+}
