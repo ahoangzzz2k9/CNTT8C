@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int a, b;
+
+    printf("Nhap vao gia tri cua 2 so a, b!");
+    scanf("%d%d", &a, &b);
+
+    if (a > b)
+    {
+        printf("\nGia tri cua a lon hon gia tri cua b");
+        printf("\na = %d, b = %d", a, b);
+    }
+
+    getch();
+    return 0;
+}
